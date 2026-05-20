@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nodum Redirect</title>
+    <script>
+        // Получаем ID из hash (например, #3)
+        const hash = window.location.hash.slice(1);
+        const id = parseInt(hash, 10);
+        
+        if (id && id > 0) {
+            // Редирект на ваш бэкенд
+            window.location.replace(`https://nhost.weebx.duckdns.org:8443/v1/go?id=${id}`);
+        } else {
+            // Если нет ID - на главный лендинг
+            window.location.replace('https://nodum-tech.github.io/Nodum_site/');
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
